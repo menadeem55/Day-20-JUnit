@@ -96,4 +96,18 @@ public class userRegistrationTest {
 
 	}
 
+	@Test
+	public void givenPasswordRule4_WhenProper_ShouldReturnTrue() {
+		boolean result = userRegistration.password4("Asdfgh@55");
+		Assert.assertEquals(true, result);
+
+	}
+
+	@Test
+	public void givenPasswordRule4_WhenNotProper_ShouldReturnFalse() {
+		boolean result = userRegistration.password4("Asdfgh55");
+		Assert.assertEquals(false, result);
+
+	}
+
 }
