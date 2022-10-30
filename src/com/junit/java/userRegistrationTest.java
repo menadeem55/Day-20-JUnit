@@ -82,4 +82,18 @@ public class userRegistrationTest {
 		Assert.assertEquals(false, result);
 	}
 
+	@Test
+	public void givenPasswordRule3_WhenProper_ShouldReturnTrue() {
+		boolean result = userRegistration.password3("asdfghjk");
+		Assert.assertEquals(true, result);
+
+	}
+
+	@Test
+	public void givenPasswordRule3_WhenNotProper_ShouldReturnFalse() {
+		boolean result = userRegistration.password3("asdfghjkpppp");
+		Assert.assertEquals(false, result);
+
+	}
+
 }
